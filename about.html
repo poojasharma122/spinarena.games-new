@@ -1,176 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why Choose Spin Arena - Premium Layout</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<section class="featured-games">
+    <div class="container">
+      <h2 class="section-title">🎰 Featured Games</h2>
+      <div class="games-grid">
+        
+        <div class="game-item">
+          <div class="game-number">01</div>
+          <div class="game-content">
+            <img src="images/argonauts.png" alt="Online Slots">
+            <h3>Online Slots</h3>
+            <p>From classic reels to modern video slots packed with exciting features.</p>
+          </div>
+        </div>
+  
+        <div class="game-item">
+          <div class="game-number">02</div>
+          <div class="game-content">
+            <img src="images/jackpot.jpg" alt="Jackpot Games">
+            <h3>Jackpot Games</h3>
+            <p>Progressive titles that grow bigger with every spin and bet placed.</p>
+          </div>
+        </div>
+  
+        <div class="game-item">
+          <div class="game-number">03</div>
+          <div class="game-content">
+            <img src="images/table.jpg" alt="Table Games">
+            <h3>Table Games</h3>
+            <p>Enjoy blackjack, poker, and roulette in a social and interactive setting.</p>
+          </div>
+        </div>
+  
+        <div class="game-item">
+          <div class="game-number">04</div>
+          <div class="game-content">
+            <img src="images/quickplay.jpg" alt="Quick Play">
+            <h3>Quick Play</h3>
+            <p>Scratch cards and instant games designed for fast fun and instant thrills.</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top, #0f0f1f, #0a0a14 70%);
-      color: #fff;
-      overflow-x: hidden;
-    }
+    .featured-games {
+  background: #0a0a0a;
+  padding: 80px 20px;
+  text-align: center;
+}
 
-    section.why-choose {
-      padding: 80px 20px;
-      text-align: center;
-    }
+.section-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  background: linear-gradient(to right, #FF0808, #7A0202, #FF0808);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    section.why-choose h2 {
-      font-size: 3rem;
-      font-weight: 800;
-      background: linear-gradient(45deg, #ffcc70, #ff6584, #9d4edd);
-      -webkit-background-clip: text;
-      color: transparent;
-      margin-bottom: 60px;
-      position: relative;
-    }
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
 
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+.game-item {
+  position: relative;
+  background: #1c1c1c;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
 
-    .feature-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      padding: 40px 20px;
-      backdrop-filter: blur(15px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-      transition: all 0.5s ease;
-      opacity: 0;
-      transform: translateY(50px) scale(0.95);
-      position: relative;
-      overflow: hidden;
-    }
+.game-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(255, 8, 8, 0.6);
+}
 
-    .feature-card.visible {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
+.game-number {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 60px;
+  font-weight: 900;
+  color: rgba(255, 8, 8, 0.15);
+  z-index: 0;
+}
 
-    .feature-card::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255, 200, 100, 0.15), transparent 70%);
-      transform: scale(0);
-      transition: transform 0.6s ease;
-    }
+.game-content {
+  position: relative;
+  padding: 30px;
+  z-index: 1;
+}
 
-    .feature-card:hover::before {
-      transform: scale(1);
-    }
+.game-content img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.5s ease;
+}
 
-    .feature-icon {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      margin: 0 auto 20px;
-      background: linear-gradient(135deg, #ff6584, #9d4edd);
-      color: #fff;
-      box-shadow: 0 0 20px rgba(255, 100, 150, 0.6);
-      animation: float 3s ease-in-out infinite;
-    }
+.game-item:hover img {
+  transform: scale(1.05);
+}
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
+.game-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
 
-    .feature-title {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
+.game-content p {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.6;
+}
 
-    .feature-desc {
-      font-size: 1rem;
-      color: #cfcfcf;
-      line-height: 1.6;
-    }
-
-    /* Hover tilt */
-    .feature-card:hover {
-      transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) scale(1.03);
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      section.why-choose h2 {
-        font-size: 2.2rem;
-      }
-      .feature-card {
-        padding: 30px 15px;
-      }
-    }
-    
   </style>
-</head>
-<body>
-
-<section class="why-choose">
-  <h2>Why Choose Spin Arena?</h2>
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon"><i class="fas fa-coins"></i></div>
-      <h3 class="feature-title">Free to Play</h3>
-      <p class="feature-desc">Jump straight into the action with free play coins, no investment required.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon"><i class="fas fa-dice"></i></div>
-      <h3 class="feature-title">Exclusive Games</h3>
-      <p class="feature-desc">Enjoy a unique collection not found anywhere else, always fresh and exciting.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon"><i class="fas fa-trophy"></i></div>
-      <h3 class="feature-title">Big Jackpots</h3>
-      <p class="feature-desc">Feel the thrill of progressive wins and exciting bonus features.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-      <h3 class="feature-title">Easy Access</h3>
-      <p class="feature-desc">Play instantly in your browser on desktop or mobile. No downloads needed.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-      <h3 class="feature-title">Safe & Secure</h3>
-      <p class="feature-desc">Fair play and responsible gaming with top-level security and encryption.</p>
-    </div>
-  </div>
-</section>
-
-<script>
-  // Reveal on scroll
-  const cards = document.querySelectorAll(".feature-card");
-
-  function revealCards() {
-    const trigger = window.innerHeight * 0.85;
-    cards.forEach(card => {
-      const rect = card.getBoundingClientRect();
-      if (rect.top < trigger) {
-        card.classList.add("visible");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", revealCards);
-  window.addEventListener("load", revealCards);
-</script>
-
-</body>
-</html>
