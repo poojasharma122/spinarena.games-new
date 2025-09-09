@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Chakra Petch", sans-serif;
+
+}
+
+body {
+    background: #0b0e13;
+}
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header start here */
+header {
+    padding: 20px 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #0B0E13;
+    transition: all 0.3s ease;
+}
+
+header.is-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: slideDown 0.35s ease-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-list ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.menu-list ul li {
+    position: relative;
+}
+
+.menu-list ul li a {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.34px;
+    color: #fff;
+    font-family: "Chakra Petch", sans-serif;
+
+    text-align: left;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+}
+
+
+
+
+
+
+.main-content {
+    overflow: hidden;
+}
+
+.menu-list ul li.active>a {
+    color: #FF0808;
+}
+
+.menu-list ul li>a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    transition: width 0.3s cubic-bezier(.77, 0, .18, 1);
+}
+
+
+
+.menu-list ul li a:hover::after,
+.menu-list ul li.active>a::after {
+    width: 100%;
+}
+
+span.menu-close {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* header end here   */
+
+/* hero css start */
+#typing-text {
+    border-right: 2px solid #FF0808;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #FF0808;
+}
+
+* {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-sec {
+    padding: 60px 0;
+}
+
+.hero-content h1 {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-family: "Chakra Petch", sans-serif;
+    margin: 0px;
+    padding: 0;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+    text-transform: capitalize;
+    font-size: 50px;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-ligatures: normal;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    line-height: 1.4;
+    color: #ababab;
+}
+
+button {
+    background-color: #e50047;
+    font-size: 17px !important;
+    font-weight: 700;
+    font-family: "Chakra Petch";
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    min-width: 100px;
+    overflow: hidden;
+    border-radius: 0;
+    padding: 18px 30px;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #FF0808 0%, #7A0202 50%, #FF0808 100%);
+    transition: 0.5s;
+    clip-path: polygon(24% 0, 88% 0, 100% 0, 100% 77%, 100% 100%, 0 100%, 0 80%, 0 30%, 7% 0) !important;
+    border: 1px solid #e50047 !important;
+}
+
+/*  */
+
+
+
+
+
+
+/*  */
+.game-wrapper {
+    padding: 60px 0;
+}
+
+.master-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.game-heading h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.master-card .master-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.master-card:hover .master-img img {
+    transform: scale(1.1);
+    /* zoom effect */
+}
+
+.master-card .hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.master-card:hover .hover-text {
+    opacity: 1;
+}
+
+.master-card .hover-text a {
+    background-image: linear-gradient(to right, #FF0808 0%, #7A0202 50%, #FF0808 100%);
+    transition: 0.5s;
+    clip-path: polygon(24% 0, 88% 0, 100% 0, 100% 77%, 100% 100%, 0 100%, 0 80%, 0 30%, 7% 0) !important;
+    border: 1px solid #e50047 !important;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.master-card .hover-text a:hover {
+    background: #c00000;
+}
+
+
+/* game inner page css */
+.bonanaza {
+    padding: 60px 0;
+}
+
+.bonanaza-inner h2 {
+    font-weight: bold;
+    font-family: "Chakra Petch", sans-serif;
+    margin: 0px;
+    padding: 0;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+    text-transform: capitalize;
+    font-size: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.bonanaza-video iframe {
+    width: 100% !important;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+
+
+
+
+
+
+
+/*  */
+.subscribe-section {
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.9), rgba(100, 0, 0, 0.9)),
+        url('../images/newsletter-bg.jpg');
+    /* replace with your bg */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.subscribe-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.subscribe-text h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.subscribe-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.subscribe-form {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.subscribe-form button {
+    background: #e60000;
+    color: #fff;
+    border: none;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subscribe-form button:hover {
+    background: #c00000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Faq css */
+.faq-sec {
+    padding: 60px 0;
+}
+
+.faq-container h2 {
+    color: #fff;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.faq-item {
+    background: #fff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    cursor: pointer;
+    padding: 15px 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #eee;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    background: #f9f9f9;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 15px 20px;
+}
+
+.faq-icon {
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+
+
+
+
+/*  */
+
+/* Footer css */
+footer {
+    background-color: #000;
+    padding: 40px 0;
+}
+
+.footer-logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-menu ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.social-links ul {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.social-links ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #1c1d20;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+}
