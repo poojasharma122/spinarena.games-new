@@ -315,11 +315,118 @@ button {
 }
 
 
+/* why choose us */
+.why-choose {
+    padding: 60px 0;
+}
+
+.feature-card {
+    background-color: #fff;
+    clip-path: polygon(100% 0px, 100% 90%, 90% 100%, 46% 100%, 0px 100%, 0px 0px);
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #edf2f7;
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 8, 8, 0.25), rgba(122, 2, 2, 0.15), transparent 70%);
+    transform: scale(0);
+    transition: transform 0.6s ease;
+}
+
+.feature-card:hover::before {
+    transform: scale(1);
+}
+
+/* .feature-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-image: linear-gradient(to right, #FF0808 0%, #7A0202 50%, #FF0808 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover::after {
+    transform: scaleX(1);
+} */
 
 
+.why-choose-inner h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #fff;
+}
 
+.why-choose-inner h2 span {
+    color: #c00000;
+}
 
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f5ff;
+    border-radius: 18px;
+    margin: 0 auto 25px;
+    transition: all 0.3s ease;
+    color: #e60000;
+    animation: float 3s ease-in-out infinite;
+}
 
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.feature-card:hover .feature-icon {
+    background-image: linear-gradient(to right, #FF0808 0%, #7A0202 50%, #FF0808 100%);
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.feature-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.feature-icon i {
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.feature-desc {
+    color: #ababab;
+    line-height: 1.6;
+    font-size: 1rem;
+}
 
 /*  */
 .subscribe-section {
