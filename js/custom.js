@@ -25,6 +25,24 @@ window.addEventListener("scroll", () => {
 //  header sticky js end
 
 
+const text = "Spin Arena";
+const element = document.getElementById('typing-text');
+let i = 0;
+let forward = true;
+
+function type() {
+    element.textContent = text.substring(0, i);
+
+    if (forward) i++;
+    else i--;
+
+    if (i === text.length) forward = false;
+    if (i === 0) forward = true;
+
+    setTimeout(type, 150); // smaller value = faster & smoother
+}
+
+type();
 
 
 const faqItems = document.querySelectorAll('.faq-item');

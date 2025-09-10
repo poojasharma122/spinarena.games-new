@@ -260,10 +260,18 @@
                         exclusive
                         promotions straight to your inbox.</p>
                 </div>
-                <form class="subscribe-form">
-                    <input type="email" class="newsletterEmail" placeholder="Your Email Address">
-                    <button type="submit" class="button-cst">SUBSCRIBE NOW</button>
-                </form>
+                <div class="form-container">
+                    <div class="form-container">
+                        <form class="subscribe-form" id="newsletterForm">
+                            <div class="input-group">
+                                <input type="email" class="newsletterEmail" id="newsletterEmail"
+                                    placeholder="Your Email Address">
+                            </div>
+                            <button type="submit" class="button-cst">SUBSCRIBE NOW</button>
+                        </form>
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -456,6 +464,7 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/subscribe.js">   </script>
     <script>
         const text = "Spin Arena";
         const element = document.getElementById('typing-text');
@@ -477,6 +486,7 @@
         type();
 
     </script>
+
 
 </body>
 

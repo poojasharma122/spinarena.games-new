@@ -535,6 +535,10 @@ span.menu-close {
     font-weight: 400;
 }
 
+.error-message.show {
+    display: block !important;
+}
+
 .form-clt input.error,
 .form-clt textarea.error {
     border: 1px solid #ff4444 !important;
@@ -715,33 +719,10 @@ span.menu-close {
     font-size: 16px;
 }
 
-.subscribe-form button {
-    background: #e60000;
-    color: #fff;
-    border: none;
-    padding: 0 25px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-.subscribe-form button:hover {
-    background: #c00000;
-}
 
 /* Newsletter error message styles */
-.subscribe-section .error-message {
-    color: #FFF;
-    font-size: 16px;
-    margin-top: 5px;
-    display: none;
-}
 
-.subscribe-form input.error {
-    border: 2px solid #ff4444 !important;
-    background: rgba(255, 68, 68, 0.1) !important;
-}
 
 
 
