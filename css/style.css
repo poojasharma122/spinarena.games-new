@@ -234,11 +234,13 @@ button {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 30px;
-   
+
 }
-.last-update-content:not(:last-child){
+
+.last-update-content:not(:last-child) {
     margin-bottom: 30px;
 }
+
 .last-update-content h4 {
     color: #fff;
     font-size: 28px;
@@ -249,7 +251,7 @@ button {
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
-    color: #fff;
+    color: #ababab;
 }
 
 .last-update-content p a {
@@ -260,7 +262,7 @@ button {
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
-    color: #fff;
+    color: #ababab;
     position: relative;
     padding-bottom: 10px;
     padding-left: 20px;
@@ -539,14 +541,107 @@ button {
 }
 
 
+.exciting {
+    padding: 40px 0;
+}
+
+.exciting p {
+    color: #ababab;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+
+.offers {
+    padding: 40px 0;
+}
+
+.offer-card {
+    clip-path: polygon(100% 0px, 100% 90%, 90% 100%, 46% 100%, 0px 100%, 0px 0px);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    height: 100%;
+}
+
+.offer-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 8, 8, 0.25), rgba(122, 2, 2, 0.15), transparent 70%);
+    transform: scale(0);
+    transition: transform 0.6s ease;
+}
+
+.offer-card:hover::before {
+    transform: scale(1);
+}
 
 
 
+.offers-inner .row .col-md-6 {
+    margin-bottom: 30px;
+}
 
+.card-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f5ff;
+    border-radius: 18px;
+    margin: 0 auto 25px;
+    transition: all 0.3s ease;
+    color: #e60000;
+    animation: float 3s ease-in-out infinite;
+}
 
+.offer-card p {
+    color: #ababab;
+    line-height: 1.6;
+    font-size: 1rem;
+    text-align: center;
+}
 
+.our-mission-content h3 {
+    text-align: left;
+    margin-bottom: 20px;
+}
 
+.our-mission-content p {
+    color: #ababab;
+    line-height: 1.6;
+    font-size: 1rem;
+}
 
+.our-mission {
+    padding: 40px 0;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.why-spin {
+    padding: 40px 0;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.why-spin-content h3 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.why-spin-content p {
+    color: #ababab;
+    line-height: 1.6;
+    font-size: 1rem;
+}
 
 
 
