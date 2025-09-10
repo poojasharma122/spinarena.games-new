@@ -174,12 +174,21 @@ span.menu-close {
 
 
 .hero-sec {
-    padding: 60px 0;
+    padding: 100px 0;
+}
+
+.bnr-img img {
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.bnr-img {
+    text-align: center;
 }
 
 .hero-content h1 {
-    display: flex;
-    align-items: center;
+
     font-weight: bold;
     font-family: "Chakra Petch", sans-serif;
     margin: 0px;
@@ -719,10 +728,28 @@ span.menu-close {
     font-size: 16px;
 }
 
+.subscribe-form button {
+    background: #e60000;
+    color: #fff;
+    border: none;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
+.subscribe-form button:hover {
+    background: #c00000;
+}
 
 /* Newsletter error message styles */
 
+
+.subscribe-form input.error {
+    border: 2px solid #ff4444 !important;
+    background: rgba(255, 68, 68, 0.1) !important;
+}
 
 
 

@@ -212,8 +212,8 @@
 
 
 
-    <!-- Login Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+       <!-- Login Modal -->
+       <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -221,14 +221,18 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form class="needs-validation" novalidate>
                         <div class="mb-3">
                             <label for="loginEmail" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="loginEmail" required>
+                            <input type="email" class="form-control validate-input" id="loginEmail"
+                                placeholder="Enter Email">
+                            <div class="invalid-feedback">Email is required.</div>
                         </div>
                         <div class="mb-3">
                             <label for="loginPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="loginPassword" required>
+                            <input type="password" class="form-control validate-input" id="loginPassword"
+                                placeholder="Enter Password">
+                            <div class="invalid-feedback">Password is required.</div>
                         </div>
                         <button type="submit" class="btn btn-primary w-100 button-cst">Login</button>
                     </form>
@@ -236,6 +240,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Signup Modal -->
     <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
@@ -246,18 +251,24 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form class="needs-validation" novalidate>
                         <div class="mb-3">
                             <label for="signupName" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="signupName" required>
+                            <input type="text" class="form-control validate-input" id="signupName"
+                                placeholder="Enter Name">
+                            <div class="invalid-feedback">Name is required.</div>
                         </div>
                         <div class="mb-3">
                             <label for="signupEmail" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="signupEmail" required>
+                            <input type="email" class="form-control validate-input" id="signupEmail"
+                                placeholder="Enter Email">
+                            <div class="invalid-feedback">Email is required.</div>
                         </div>
                         <div class="mb-3">
                             <label for="signupPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="signupPassword" required>
+                            <input type="password" class="form-control validate-input" id="signupPassword"
+                                placeholder="Enter Password">
+                            <div class="invalid-feedback">Password is required.</div>
                         </div>
                         <button type="submit" class="btn btn-success w-100 button-cst">Signup</button>
                     </form>

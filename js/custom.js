@@ -70,5 +70,28 @@ faqItems.forEach(item => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const forms = document.querySelectorAll(".needs-validation");
 
+    forms.forEach(form => {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let valid = true;
+
+        form.querySelectorAll(".validate-input").forEach(input => {
+          if (!input.value.trim()) {
+            input.classList.add("is-invalid");
+            valid = false;
+          } else {
+            input.classList.remove("is-invalid");
+          }
+        });
+
+        if (valid) {
+          alert("Form submitted successfully!");
+          form.reset();
+        }
+      });
+    });
+  });
  
