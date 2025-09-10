@@ -68,3 +68,4 @@ faqItems.forEach(item => {
         }
     });
 });
+

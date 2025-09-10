@@ -8,6 +8,22 @@
 
 }
 
+/* Change scrollbar for body */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to right, #FF0808 0%, #7A0202 50%, #FF0808 100%);
+    border-radius: 10px;
+}
+
+
+
 body {
     background: #0b0e13;
 }
@@ -462,6 +478,20 @@ button {
     font-size: 1rem;
 }
 
+/* Error message styles */
+.error-message {
+    color: #ff4444;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+    font-weight: 400;
+}
+
+.form-clt input.error,
+.form-clt textarea.error {
+    border: 1px solid #ff4444 !important;
+    background: rgba(255, 68, 68, 0.1) !important;
+}
 
 
 
@@ -490,6 +520,13 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.subscribe-inner {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .subscribe-container {
@@ -652,8 +689,35 @@ button {
     color: #ababab;
 }
 
+
+
 .gt-contact-us {
     padding: 40px 0;
+}
+
+.gt-contact-bg {
+    padding: 23px;
+    background-color: #1c1d20;
+}
+
+.gt-comment-form-wrap h4,
+.gt-contact-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    color: #fff;
+}
+
+.gt-comment-form-wrap p,
+.gt-contact-content p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #ababab;
+}
+
+.gt-contact-content p a {
+    color: #e60000;
 }
 
 /*  */
