@@ -234,9 +234,11 @@ button {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 30px;
+   
+}
+.last-update-content:not(:last-child){
     margin-bottom: 30px;
 }
-
 .last-update-content h4 {
     color: #fff;
     font-size: 28px;
@@ -248,6 +250,10 @@ button {
     font-weight: 400;
     line-height: 28px;
     color: #fff;
+}
+
+.last-update-content p a {
+    color: #e60000;
 }
 
 .last-update-content ul li {
