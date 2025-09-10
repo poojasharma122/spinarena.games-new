@@ -213,7 +213,6 @@ span.menu-close {
 }
 
 .button-cst {
-    background-color: #e50047;
     font-size: 16px !important;
     font-weight: 700;
     font-family: "Chakra Petch";
@@ -231,6 +230,9 @@ span.menu-close {
     clip-path: polygon(24% 0, 88% 0, 100% 0, 100% 77%, 100% 100%, 0 100%, 0 80%, 0 30%, 7% 0) !important;
     border: 1px solid #e50047 !important;
 }
+.button-cst:hover {
+    background-image: linear-gradient(to right, #7A0202 0%, #FF0808 50%, #7A0202 100%);
+  }
 
 /*  */
 
@@ -728,28 +730,11 @@ span.menu-close {
     font-size: 16px;
 }
 
-.subscribe-form button {
-    background: #e60000;
-    color: #fff;
-    border: none;
-    padding: 0 25px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-.subscribe-form button:hover {
-    background: #c00000;
-}
 
 /* Newsletter error message styles */
 
 
-.subscribe-form input.error {
-    border: 2px solid #ff4444 !important;
-    background: rgba(255, 68, 68, 0.1) !important;
-}
 
 
 
