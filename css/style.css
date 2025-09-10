@@ -203,9 +203,9 @@ span.menu-close {
     color: #ababab;
 }
 
-button {
+.button-cst {
     background-color: #e50047;
-    font-size: 17px !important;
+    font-size: 16px !important;
     font-weight: 700;
     font-family: "Chakra Petch";
     letter-spacing: 0.5px;
@@ -215,7 +215,7 @@ button {
     min-width: 100px;
     overflow: hidden;
     border-radius: 0;
-    padding: 18px 30px;
+    padding: 12px 30px;
     background-size: 200% auto;
     background-image: linear-gradient(to right, #FF0808 0%, #7A0202 50%, #FF0808 100%);
     transition: 0.5s;
@@ -528,7 +528,7 @@ button {
 /* Error message styles */
 .error-message {
     color: #ff4444;
-    font-size: 12px;
+    font-size: 16px;
     margin-top: 5px;
     display: none;
     font-weight: 400;
@@ -728,6 +728,20 @@ button {
 .subscribe-form button:hover {
     background: #c00000;
 }
+
+/* Newsletter error message styles */
+.subscribe-section .error-message {
+    color: #FFF;
+    font-size: 16px;
+    margin-top: 5px;
+    display: none;
+}
+
+.subscribe-form input.error {
+    border: 2px solid #ff4444 !important;
+    background: rgba(255, 68, 68, 0.1) !important;
+}
+
 
 
 

@@ -33,13 +33,13 @@
                                 <li class="active"><a href="contact">Contact</a></li>
                                 <!-- Login & Signup buttons inside menu -->
                                 <li>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    <button type="button" class="btn btn-primary button-cst" data-bs-toggle="modal"
                                         data-bs-target="#loginModal">
                                         Login
                                     </button>
                                 </li>
                                 <li>
-                                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    <button type="button" class="btn btn-success button-cst" data-bs-toggle="modal"
                                         data-bs-target="#signupModal">
                                         Signup
                                     </button>
@@ -79,35 +79,44 @@
                             </h4>
                             <p>Have a question or need assistance? The Spin Arena team is here to help.
                             </p>
-                            <form id="contactForm">
+                            <form id="contactForm" novalidate>
                                 <div class="row g-4">
                                     <div class="col-lg-6">
                                         <div class="form-clt">
-                                            <input type="text" name="firstName" id="firstName" placeholder="Your Name" >
+                                            <input type="text" name="firstName" id="firstName" placeholder="First Name ">
+                                            <div class="error-message" id="firstNameError"></div>
                                         </div>
                                     </div>
+
                                     <div class="col-lg-6">
                                         <div class="form-clt">
-                                            <input type="text" name="lastName" id="lastName" placeholder="Last Name" >
+                                            <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+                                            <div class="error-message" id="lastNameError"></div>
                                         </div>
                                     </div>
+
                                     <div class="col-lg-12">
                                         <div class="form-clt">
-                                            <input type="email" name="email" id="email" placeholder="Your Email" >
+                                            <input type="email" name="email" id="email" placeholder="Your Email">
+                                            <div class="error-message" id="emailError"></div>
                                         </div>
                                     </div>
+
                                     <div class="col-lg-12">
                                         <div class="form-clt">
-                                            <textarea name="message" id="message" placeholder="Type your message" ></textarea>
+                                            <textarea name="message" id="message"
+                                                placeholder="Type your message"></textarea>
+                                            <div class="error-message" id="messageError"></div>
                                         </div>
                                     </div>
+
                                     <div class="col-lg-6">
-                                        <button type="submit" class="gt-theme-btn">
-                                            Send Message
-                                        </button>
+                                        <button type="submit" class="gt-theme-btn button-cst">Send Message</button>
                                     </div>
                                 </div>
                             </form>
+
+
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -147,9 +156,10 @@
                         promotions straight to your inbox.</p>
                 </div>
                 <form class="subscribe-form">
-                    <input type="email" placeholder="Your Email Address" required>
+                    <input type="email" class="newsletterEmail" placeholder="Your Email Address">
                     <button type="submit">SUBSCRIBE NOW</button>
                 </form>
+                <div class="error-message"></div>
             </div>
         </div>
     </section>
@@ -241,7 +251,7 @@
                             <label for="loginPassword" class="form-label">Password</label>
                             <input type="password" class="form-control" id="loginPassword" required>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                        <button type="submit" class="btn btn-primary w-100 button-cst">Login</button>
                     </form>
                 </div>
             </div>
@@ -270,7 +280,7 @@
                             <label for="signupPassword" class="form-label">Password</label>
                             <input type="password" class="form-control" id="signupPassword" required>
                         </div>
-                        <button type="submit" class="btn btn-success w-100">Signup</button>
+                        <button type="submit" class="btn btn-success w-100 button-cst">Signup</button>
                     </form>
                 </div>
             </div>
@@ -279,6 +289,92 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        // Make sure DOM is ready
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+            if (!form) return; // safety
+
+            // Element references
+            const firstName = document.getElementById('firstName');
+            const lastName = document.getElementById('lastName');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
+
+            const firstNameError = document.getElementById('firstNameError');
+            const lastNameError = document.getElementById('lastNameError');
+            const emailError = document.getElementById('emailError');
+            const messageError = document.getElementById('messageError');
+
+            // helper to reset all errors
+            function resetErrors() {
+                [firstNameError, lastNameError, emailError, messageError].forEach(div => {
+                    if (div) { div.textContent = ''; div.style.display = 'none'; }
+                });
+            }
+
+            // hide the error for a field when user types
+            const inputs = [firstName, lastName, email, message];
+            const errorDivs = [firstNameError, lastNameError, emailError, messageError];
+            inputs.forEach((inp, idx) => {
+                if (!inp) return;
+                inp.addEventListener('input', function () {
+                    const err = errorDivs[idx];
+                    if (err) { err.textContent = ''; err.style.display = 'none'; }
+                });
+            });
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault(); // do not submit
+
+                // reset previous errors
+                resetErrors();
+
+                // validation checks
+                let isValid = true;
+
+                if (!firstName || firstName.value.trim() === '') {
+                    firstNameError.textContent = 'First name is required.';
+                    firstNameError.style.display = 'block';
+                    isValid = false;
+                }
+
+                if (!lastName || lastName.value.trim() === '') {
+                    lastNameError.textContent = 'Last name is required.';
+                    lastNameError.style.display = 'block';
+                    isValid = false;
+                }
+
+                const emailVal = email ? email.value.trim() : '';
+                if (!email || emailVal === '') {
+                    emailError.textContent = 'Email is required.';
+                    emailError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    // basic email pattern (no class changes)
+                    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+                    if (!emailPattern.test(emailVal)) {
+                        emailError.textContent = 'Please enter a valid email.';
+                        emailError.style.display = 'block';
+                        isValid = false;
+                    }
+                }
+
+                if (!message || message.value.trim() === '') {
+                    messageError.textContent = 'Message is required.';
+                    messageError.style.display = 'block';
+                    isValid = false;
+                }
+
+
+                if (isValid) {
+                    // form is valid — nothing else per your request
+                    // e.g., you could send an AJAX request here if needed
+                    console.log('Form validated OK (no further action per requirements).');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

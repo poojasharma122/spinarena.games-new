@@ -33,13 +33,13 @@
                                 <li><a href="contact">Contact</a></li>
                                 <!-- Login & Signup buttons inside menu -->
                                 <li>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    <button type="button" class="btn btn-primary button-cst" data-bs-toggle="modal"
                                         data-bs-target="#loginModal">
                                         Login
                                     </button>
                                 </li>
                                 <li>
-                                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    <button type="button" class="btn btn-success button-cst" data-bs-toggle="modal"
                                         data-bs-target="#signupModal">
                                         Signup
                                     </button>
@@ -152,8 +152,7 @@
                         <div class="feature-card text-center p-4">
                             <div class="feature-icon mb-3"><i class="fas fa-coins"></i></div>
                             <h3 class="feature-title">Free to Play</h3>
-                            <p class="feature-desc">Jump straight into the action with free play coins, no investment
-                                required.</p>
+                            <p class="feature-desc">Jump straight into the action with free play coins.</p>
                         </div>
                     </div>
 
@@ -161,8 +160,8 @@
                         <div class="feature-card text-center p-4">
                             <div class="feature-icon mb-3"><i class="fas fa-dice"></i></div>
                             <h3 class="feature-title">Exclusive Games</h3>
-                            <p class="feature-desc">Enjoy a unique collection not found anywhere else, always fresh and
-                                exciting.</p>
+                            <p class="feature-desc">A unique collection you won’t find on other platforms.
+                            </p>
                         </div>
                     </div>
 
@@ -170,7 +169,8 @@
                         <div class="feature-card text-center p-4">
                             <div class="feature-icon mb-3"><i class="fas fa-trophy"></i></div>
                             <h3 class="feature-title">Big Jackpots</h3>
-                            <p class="feature-desc">Feel the thrill of progressive wins and exciting bonus features.</p>
+                            <p class="feature-desc">Experience the thrill of progressive wins and bonus features.
+                            </p>
                         </div>
                     </div>
 
@@ -178,8 +178,8 @@
                         <div class="feature-card text-center p-4">
                             <div class="feature-icon mb-3"><i class="fas fa-bolt"></i></div>
                             <h3 class="feature-title">Easy Access</h3>
-                            <p class="feature-desc">Play instantly in your browser on desktop or mobile. No downloads
-                                needed.</p>
+                            <p class="feature-desc">Play instantly in your browser on desktop or mobile.
+                            </p>
                         </div>
                     </div>
 
@@ -187,8 +187,8 @@
                         <div class="feature-card text-center p-4">
                             <div class="feature-icon mb-3"><i class="fas fa-shield-alt"></i></div>
                             <h3 class="feature-title">Safe & Secure</h3>
-                            <p class="feature-desc">Fair play and responsible gaming with top-level security and
-                                encryption.</p>
+                            <p class="feature-desc">Fair play and responsible gaming at the core.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -261,9 +261,10 @@
                         promotions straight to your inbox.</p>
                 </div>
                 <form class="subscribe-form">
-                    <input type="email" placeholder="Your Email Address" required>
-                    <button type="submit">SUBSCRIBE NOW</button>
+                    <input type="email" class="newsletterEmail" placeholder="Your Email Address">
+                    <button type="submit" class="button-cst">SUBSCRIBE NOW</button>
                 </form>
+
             </div>
         </div>
     </section>
@@ -358,8 +359,8 @@
                             <li><a href="about">About</a></li>
                             <li><a href="contact">Contact</a></li>
                             <li><a href="privacy-policy">Privacy Policy</a></li>
-                            <li><a href="terms-&-conditions">Terms of Service</a></li>
-                            <li><a href="cookies-policy">Cookie Policy</a></li>
+                            <li><a href="terms-&-conditions">Terms & Conditions </a></li>
+                            <li><a href="cookies-policy">Cookies Policy </a></li>
                             <li><a href="responsible-play">Responsible Play </a></li>
                         </ul>
                     </div>
@@ -417,7 +418,7 @@
                             <label for="loginPassword" class="form-label">Password</label>
                             <input type="password" class="form-control" id="loginPassword" required>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                        <button type="submit" class="btn btn-primary w-100 button-cst">Login</button>
                     </form>
                 </div>
             </div>
@@ -446,7 +447,7 @@
                             <label for="signupPassword" class="form-label">Password</label>
                             <input type="password" class="form-control" id="signupPassword" required>
                         </div>
-                        <button type="submit" class="btn btn-success w-100">Signup</button>
+                        <button type="submit" class="btn btn-success w-100 button-cst">Signup</button>
                     </form>
                 </div>
             </div>
@@ -455,6 +456,28 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        const text = "Spin Arena";
+        const element = document.getElementById('typing-text');
+        let i = 0;
+        let forward = true;
+
+        function type() {
+            element.textContent = text.substring(0, i);
+
+            if (forward) i++;
+            else i--;
+
+            if (i === text.length) forward = false;
+            if (i === 0) forward = true;
+
+            setTimeout(type, 150); // smaller value = faster & smoother
+        }
+
+        type();
+
+    </script>
+
 </body>
 
 </html>

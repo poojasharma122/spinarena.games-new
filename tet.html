@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Form Validation - Single File</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#fafafa; padding:30px; }
+    .row { display:flex; flex-wrap:wrap; gap:16px; }
+    .col-lg-6 { flex: 1 1 45%; min-width:220px; }
+    .col-lg-12 { flex: 1 1 100%; }
+    .form-clt { background:#fff; padding:12px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.04); }
+    input, textarea { width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:14px; box-sizing:border-box; }
+    textarea { min-height:100px; resize:vertical; }
+    .gt-theme-btn { padding:10px 18px; background:#007bff; color:#fff; border:none; border-radius:6px; cursor:pointer; }
+    .gt-theme-btn:active { transform:translateY(1px); }
+    .error-message {
+      color:#e53935;
+      font-size:13px;
+      margin-top:8px;
+      display:none; /* hidden by default - JS will show when needed */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Contact Form (Validation Demo)</h2>
+
+  <form id="contactForm" novalidate>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="form-clt">
+          <input type="text" name="firstName" id="firstName" placeholder="Your Name" >
+          <div class="error-message" id="firstNameError"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="form-clt">
+          <input type="text" name="lastName" id="lastName" placeholder="Last Name" >
+          <div class="error-message" id="lastNameError"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="form-clt">
+          <input type="email" name="email" id="email" placeholder="Your Email" >
+          <div class="error-message" id="emailError"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="form-clt">
+          <textarea name="message" id="message" placeholder="Type your message" ></textarea>
+          <div class="error-message" id="messageError"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <button type="submit" class="gt-theme-btn button-cst">Send Message</button>
+      </div>
+    </div>
+  </form>
+
+  <script>
+   
+  </script>
+</body>
+</html>
