@@ -157,27 +157,7 @@
         margin-bottom: 10px;
     }
 
-    .modal-inner {
-        flex-direction: column;
-    }
 
-    .modal-content {
-        height: 700px;
-        overflow: auto;
-    }
-
-    .modal-image {
-        flex: auto;
-        height: 300px;
-    }
-
-    .modal-contact-info {
-        margin-top: 0;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-    }
 
     .last-update-content h4 {
         font-size: 24px;
