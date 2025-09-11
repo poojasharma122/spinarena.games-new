@@ -7,7 +7,10 @@
     font-family: "Chakra Petch", sans-serif;
 
 }
-
+body {
+    overflow-x: hidden; /* horizontal scroll disable */
+  }
+  
 /* Change scrollbar for body */
 body::-webkit-scrollbar {
     width: 8px;
@@ -1056,4 +1059,8 @@ body.active .cursor-effect {
 
 .why-spin-inner .row {
     align-items: center;
+}
+
+.main-content {
+    overflow: hidden;
 }
