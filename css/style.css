@@ -544,7 +544,7 @@ span.menu-close {
 
 .game-content img {
     width: 100%;
-    height: 220px;
+    height: 350px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -1032,6 +1032,14 @@ footer {
 
 .bottom-ft p a {
     color: #e60000;
+}
+
+p a:hover {
+    color: #ababab !important;
+}
+
+section.subscribe-section div#emailError {
+    color: #fff;
 }
 
 /* Circle Effect */
