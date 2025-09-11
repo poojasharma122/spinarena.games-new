@@ -179,7 +179,22 @@
         width: 100%;
     }
 
+    .last-update-content h4 {
+        font-size: 24px;
 
+    }
+
+    .bonanaza-video iframe {
+        height: 300px;
+
+    }
+
+    .bonanaza-inner h2 {
+
+        font-size: 24px;
+        margin-bottom: 30px;
+
+    }
 }
 
 @media (max-width: 575px) {
@@ -187,6 +202,7 @@
         padding: 11px;
         font-size: 14px;
     }
+
     .subscribe-form .button-cst {
         font-size: 13px !important;
         font-weight: 400;
