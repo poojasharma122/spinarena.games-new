@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lucky Ox
+    </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header start here -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header-content">
+                        <div class="logo">
+                            <a href="./"><img src="images/logo.svg" alt="logo"></a>
+                        </div>
+                        <div class="menu-list" id="mySidenavs">
+                            <span class="menu-close" onclick="closeNav()">
+                                <i class="fa-solid fa-xmark"></i>
+                            </span>
+                            <ul>
+                                <li><a href="./">Home</a></li>
+                                <li><a href="games">Games</a></li>
+                                <li><a href="about">About</a></li>
+                                <li><a href="contact">Contact</a></li>
+                                <!-- Login & Signup buttons inside menu -->
+                                <li>
+                                    <button type="button" class="btn btn-primary button-cst" data-bs-toggle="modal"
+                                        data-bs-target="#loginModal">
+                                        Login
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-success button-cst" data-bs-toggle="modal"
+                                        data-bs-target="#signupModal">
+                                        Signup
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-icon">
+                            <span onclick="openNav()">
+                                <i class="fa-solid fa-bars"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-overlay" id="menuOverlay" onclick="closeNav()"></div>
+    </header>
+    <!-- header end here -->
+
+
+    <!-- Main content -->
+
+
+    <section class="bonanaza">
+        <div class="container">
+            <div class="bonanaza-inner">
+                <h2 class="scroll-animate animate">Lucky Ox
+                </h2>
+            </div>
+
+            <div class="bonanaza-video">
+                <iframe id="iframe" tabindex="0" frameborder="0" scrolling="no"
+                    data-game-src="https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vs10fortnhsly&amp;websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&amp;jurisdiction=99&amp;lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F"
+                    style="border:none;"
+                    src="https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vs10fortnhsly&amp;websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&amp;jurisdiction=99&amp;lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&amp;lang=EN&amp;cur=USD"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- main content -->
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-top">
+                    <div class="footer-content">
+                        <h2>Disclaimer
+                        </h2>
+                        <p>Spin Arena is a social casino gaming platform intended solely for entertainment purposes. No
+                            real money is involved, and no actual prizes of monetary value are awarded. Participation is
+                            restricted to individuals aged 18 years or older (or the legal age in your jurisdiction).
+                            Playing on this site does not imply future success in real-money gambling. By using Spin
+                            Arena, you acknowledge and agree to our Terms of Service and Privacy Policy. If you have
+                            concerns about gambling behavior, please seek help from a responsible gaming organization in
+                            your region.
+                        </p>
+                    </div>
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="./">Home</a></li>
+                            <li><a href="games">Games</a></li>
+                            <li><a href="about">About</a></li>
+                            <li><a href="contact">Contact</a></li>
+                            <li><a href="privacy-policy">Privacy Policy</a></li>
+                            <li><a href="terms-&-conditions">Terms & Conditions </a></li>
+                            <li><a href="cookies-policy">Cookies Policy </a></li>
+                            <li><a href="responsible-play">Responsible Play </a></li>
+                        </ul>
+                    </div>
+                    <div class="social-links">
+                        <ul>
+                            <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-line">
+            <div class="container">
+                <div class="bottom-ft">
+                    <div class="text-center">
+                        <p> © 2025 All Rights Reserved <a href="./">spinarena.games
+                            </a></p>
+                    </div>
+                    <div class="footer_SSl">
+                        <span class="footer_SSlLink"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control validate-input" id="loginEmail"
+                                placeholder="Enter Email">
+                            <div class="invalid-feedback">Email is required.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control validate-input" id="loginPassword"
+                                placeholder="Enter Password">
+                            <div class="invalid-feedback">Password is required.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 button-cst">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Signup</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="signupName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control validate-input" id="signupName"
+                                placeholder="Enter Name">
+                            <div class="invalid-feedback">Name is required.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control validate-input" id="signupEmail"
+                                placeholder="Enter Email">
+                            <div class="invalid-feedback">Email is required.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control validate-input" id="signupPassword"
+                                placeholder="Enter Password">
+                            <div class="invalid-feedback">Password is required.</div>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 button-cst">Signup</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
