@@ -103,7 +103,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-clt">
                                                 <input type="email" name="email" id="email" placeholder="Your Email">
-                                                <div class="error-message" id="emailError"></div>
+                                                <div class="error-message" id="emailErrorss"></div>
                                             </div>
                                         </div>
 
@@ -342,19 +342,19 @@
 
             const firstNameError = document.getElementById('firstNameError');
             const lastNameError = document.getElementById('lastNameError');
-            const emailError = document.getElementById('emailError');
+            const emailErrorss = document.getElementById('emailErrorss');
             const messageError = document.getElementById('messageError');
 
             // helper to reset all errors
             function resetErrors() {
-                [firstNameError, lastNameError, emailError, messageError].forEach(div => {
+                [firstNameError, lastNameError, emailErrorss, messageError].forEach(div => {
                     if (div) { div.textContent = ''; div.style.display = 'none'; }
                 });
             }
 
             // hide the error for a field when user types
             const inputs = [firstName, lastName, email, message];
-            const errorDivs = [firstNameError, lastNameError, emailError, messageError];
+            const errorDivs = [firstNameError, lastNameError, emailErrorss, messageError];
             inputs.forEach((inp, idx) => {
                 if (!inp) return;
                 inp.addEventListener('input', function () {
@@ -386,15 +386,15 @@
 
                 const emailVal = email ? email.value.trim() : '';
                 if (!email || emailVal === '') {
-                    emailError.textContent = 'Email is required.';
-                    emailError.style.display = 'block';
+                    emailErrorss.textContent = 'Email is required.';
+                    emailErrorss.style.display = 'block';
                     isValid = false;
                 } else {
                     // basic email pattern (no class changes)
                     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
                     if (!emailPattern.test(emailVal)) {
-                        emailError.textContent = 'Please enter a valid email.';
-                        emailError.style.display = 'block';
+                        emailErrorss.textContent = 'Please enter a valid email.';
+                        emailErrorss.style.display = 'block';
                         isValid = false;
                     }
                 }
