@@ -7,7 +7,6 @@
         overscroll-behavior-y: contain;
         scrollbar-width: none;
         background: #fff none repeat scroll 0 0;
-        border-right: 2px solid #FF0808;
 
         transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out;
         height: 100vh;
@@ -181,10 +180,16 @@
     }
 
 
+}
 
-
-
-
-
-
+@media (max-width: 575px) {
+    .subscribe-form input {
+        padding: 11px;
+        font-size: 14px;
+    }
+    .subscribe-form .button-cst {
+        font-size: 13px !important;
+        font-weight: 400;
+        padding: 12px 6px;
+    }
 }

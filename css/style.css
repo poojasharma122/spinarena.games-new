@@ -7,10 +7,12 @@
     font-family: "Chakra Petch", sans-serif;
 
 }
+
 body {
-    overflow-x: hidden; /* horizontal scroll disable */
-  }
-  
+    overflow-x: hidden;
+    /* horizontal scroll disable */
+}
+
 /* Change scrollbar for body */
 body::-webkit-scrollbar {
     width: 8px;
@@ -1063,4 +1065,8 @@ body.active .cursor-effect {
 
 .main-content {
     overflow: hidden;
+}
+
+form#newsletterForm .input-group {
+    flex-wrap: nowrap;
 }
