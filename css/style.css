@@ -330,6 +330,13 @@ span.menu-close {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+}
+
+.game-wrapper .row .col-lg-4.col-md-6 {
+    margin-bottom: 30px;
 }
 
 .game-heading h2 {
@@ -1099,4 +1106,10 @@ form#newsletterForm .input-group {
     width: 200px;
     margin: auto;
     display: block;
+}
+
+.why-spin-img img,
+.our-mission-img img {
+    width: 100%;
+    border-radius: 16px;
 }

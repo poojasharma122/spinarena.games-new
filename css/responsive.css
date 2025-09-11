@@ -1,3 +1,11 @@
+@media (max-width: 1199px) {
+    .menu-list ul {
+
+        gap: 14px;
+
+    }
+}
+
 @media (max-width: 767px) {
     .menu-list {
         width: 0;
@@ -187,5 +195,9 @@
         font-size: 13px !important;
         font-weight: 400;
         padding: 12px 6px;
+    }
+
+    .last-update-content h4 {
+        font-size: 22px;
     }
 }
