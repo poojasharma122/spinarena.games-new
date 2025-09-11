@@ -173,13 +173,8 @@ span.menu-close {
 /* header end here   */
 
 /* hero css start */
-#typing-text {
-    border-right: 2px solid #FF0808;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
+.hero-content h1 span {
     color: #FF0808;
-    height: 60px;
 }
 
 
