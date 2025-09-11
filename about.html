@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About </title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">    
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
@@ -64,7 +65,7 @@
     <section class="inner-bnr">
         <div class="container">
             <div class="inner-content">
-                <h2>About </h2>
+                <h2 data-aos="fade-up" >About </h2>
             </div>
         </div>
     </section>
@@ -73,7 +74,7 @@
     <!--  -->
     <section class="exciting">
         <div class="container">
-            <div class="exciting-inner">
+            <div class="exciting-inner" data-aos="fade-up">
                 <p>Spin Arena was built to create an exciting online space where anyone can enjoy social casino gaming
                     in a safe and entertaining environment. Our platform brings together a wide range of free-to-play
                     slots, jackpots, table games, and instant-win titles—all designed to be accessible on any device
@@ -90,7 +91,7 @@
             <div class="our-mission-inner">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="our-mission-content">
+                        <div class="our-mission-content" data-aos="fade-right">
                             <h3 class="section-title">Our <span> Mission</span> </h3>
                             <p> To provide a top-quality social casino experience that blends fun, fairness, and
                                 convenience. Spin Arena is all about enjoyment, giving players the thrill of
@@ -99,7 +100,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="our-mission-img">
+                        <div class="our-mission-img" data-aos="fade-left">
                             <img src="images/Spell-Master.png" alt="">
                         </div>
                     </div>
@@ -116,7 +117,7 @@
                 <h2 class="section-title">What We <span>Offer</span></h2>
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
-                        <div class="offer-card pulse">
+                        <div class="offer-card pulse" data-aos="fade-up">
                             <div class="card-icon">
                                 <i class="fas fa-gamepad fa-2x"></i>
                             </div>
@@ -125,7 +126,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="offer-card floating">
+                        <div class="offer-card floating" data-aos="fade-up">
                             <div class="card-icon">
                                 <i class="fas fa-trophy fa-2x"></i>
                             </div>
@@ -133,7 +134,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="offer-card  floating">
+                        <div class="offer-card  floating" data-aos="fade-up">
                             <div class="card-icon">
                                 <i class="fas fa-desktop fa-2x"></i>
                             </div>
@@ -141,7 +142,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="offer-card pulse">
+                        <div class="offer-card pulse" data-aos="fade-up">
                             <div class="card-icon">
                                 <i class="fas fa-shield-alt fa-2x"></i>
 
@@ -161,7 +162,7 @@
             <div class="why-spin-inner">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="why-spin-content">
+                        <div class="why-spin-content" data-aos="fade-right">
                             <h3 class="section-title">Why <span>Spin Arena?</span> </h3>
                             <p> We’re not just another gaming site—we’re a community. Our focus is on delivering games
                                 that are fun, fair, and easy to enjoy. With free play tokens, daily rewards, and regular
@@ -170,7 +171,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="why-spin-img">
+                        <div class="why-spin-img" data-aos="fade-left">
                             <img src="images/Spell-Master.png" alt="">
                         </div>
                     </div>
@@ -329,9 +330,17 @@
         </div>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/subscribe.js"></script>
     <script src="js/mouse.js"></script>
+    <script>
+          AOS.init({
+    duration: 1200,
+  })
+  
+
+    </script>
 
 </body>
 
