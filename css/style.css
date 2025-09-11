@@ -179,6 +179,7 @@ span.menu-close {
     white-space: nowrap;
     overflow: hidden;
     color: #FF0808;
+    height: 60px;
 }
 
 
@@ -218,7 +219,6 @@ span.menu-close {
 }
 
 .hero-content h1 {
-
     font-weight: bold;
     font-family: "Chakra Petch", sans-serif;
     margin: 0px;
