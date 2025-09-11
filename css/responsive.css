@@ -201,3 +201,16 @@
         font-size: 22px;
     }
 }
+
+@media (max-width: 375px) {
+    .subscribe-form input {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .subscribe-form .button-cst {
+        font-size: 12px !important;
+        padding: 12px 4px;
+    }
+
+}

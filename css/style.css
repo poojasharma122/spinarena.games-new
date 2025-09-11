@@ -748,7 +748,7 @@ span.menu-close {
 
 .subscribe-form {
     flex: 1;
-    min-width: 300px;
+  
     display: flex;
     background: #fff;
     border-radius: 4px;
