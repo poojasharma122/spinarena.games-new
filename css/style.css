@@ -1045,3 +1045,15 @@ footer {
 body.active .cursor-effect {
     transform: scale(1);
 }
+
+.our-mission-img img {
+    width: 100%;
+}
+
+.our-mission-inner .row {
+    align-items: center;
+}
+
+.why-spin-inner .row {
+    align-items: center;
+}
