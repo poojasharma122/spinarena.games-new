@@ -191,6 +191,10 @@
         font-size: 14px;
     }
 
+    .game-content img {
+        height: 280px;
+
+    }
     .subscribe-form .button-cst {
         font-size: 13px !important;
         font-weight: 400;
