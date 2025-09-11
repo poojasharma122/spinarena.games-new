@@ -160,6 +160,11 @@ span.menu-close {
     visibility: visible;
 }
 
+.logo img {
+    width: 100%;
+    max-width: 150px;
+}
+
 /* header end here   */
 
 /* hero css start */
@@ -184,15 +189,20 @@ span.menu-close {
 }
 
 @keyframes floatRotate {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px) rotate(0deg);
     }
+
     25% {
         transform: translateY(-10px) rotate(1deg);
     }
+
     50% {
         transform: translateY(-5px) rotate(0deg);
     }
+
     75% {
         transform: translateY(-15px) rotate(-1deg);
     }
@@ -1029,9 +1039,9 @@ footer {
     pointer-events: none;
     transform: scale(0);
     transition: transform 0.3s ease;
-    z-index: 999;
-  }
+    z-index: 99999;
+}
 
-  body.active .cursor-effect {
+body.active .cursor-effect {
     transform: scale(1);
-  }
+}
