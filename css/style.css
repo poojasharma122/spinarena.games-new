@@ -1078,3 +1078,16 @@ body.active .cursor-effect {
 form#newsletterForm .input-group {
     flex-wrap: nowrap;
 }
+
+.popup-logo {
+    background: #0b0e13;
+    transition: 0.5s;
+    padding: 20px;
+    border-radius: 6px 6px 0 0;
+}
+
+.popup-logo img {
+    width: 200px;
+    margin: auto;
+    display: block;
+}
