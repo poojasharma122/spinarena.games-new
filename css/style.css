@@ -392,7 +392,7 @@ span.menu-close {
 
 /* why choose us */
 .why-choose {
-    padding: 60px 0;
+    padding: 0 0 60px 0;
 }
 
 .feature-card {
@@ -484,7 +484,7 @@ span.menu-close {
 }
 
 .featured-games {
-    padding: 60px 0;
+    padding: 0 0 40px 0;
 }
 
 .game-item {
@@ -1003,3 +1003,19 @@ footer {
 .bottom-ft p a {
     color: #e60000;
 }
+
+/* Circle Effect */
+.cursor-effect {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 8, 8, 0.25), rgba(122, 2, 2, 0.15), transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+  }
+
+  body.active .cursor-effect {
+    transform: scale(1);
+  }
