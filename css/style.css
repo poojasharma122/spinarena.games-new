@@ -186,7 +186,7 @@ span.menu-close {
 .bnr-img img {
     width: 100%;
     margin: 0 auto;
-    animation: floatRotate 6s ease-in-out infinite;
+    /* animation: floatRotate 6s ease-in-out infinite; */
 }
 
 @keyframes floatRotate {
